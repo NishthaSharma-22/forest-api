@@ -8,6 +8,9 @@ app = FastAPI()
 images = "images"
 
 image_names = [f"image{i}.png" for i in range(1,6)]
+@app.get("/")
+async def home_root():
+    return {"message": "success"}
 
 @app.get("/random-image")
 
